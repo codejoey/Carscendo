@@ -27,9 +27,7 @@ public class HandAnim : MonoBehaviour
     public float anim_frames = 4f;
     private float grip_state = 0f;
     private float trigger_state = 0f;
-    private float triggerCap_state = 0f;
-    private float thumbCap_state = 0f;
-
+    
     private void Awake()
     {
         controller = new PlayerControls();
@@ -51,14 +49,23 @@ public class HandAnim : MonoBehaviour
         if (isLeft)
         {
             //Grip, Oculus LGrip Trigger or keyboard W
-            controller.VR.Grip.performed += Grip_performed;
-            controller.VR.Grip.canceled += Grip_performed;
+            controller.VR.Left_Grip.performed += Grip_performed;
+            controller.VR.Left_Grip.canceled += Grip_performed;
 
             //Gas, Oculus LTrigger or keyboward S
-            controller.VR.Gas.performed += Gas_performed;
-            controller.VR.Gas.canceled += Gas_performed;
+            controller.VR.Left_Gas.performed += Gas_performed;
+            controller.VR.Left_Gas.canceled += Gas_performed;
         }
-        
+        else //we're right handed...
+        {
+            //Grip, Oculus LGrip Trigger or keyboard W
+            controller.VR.Right_Grip.performed += Grip_performed;
+            controller.VR.Right_Grip.canceled += Grip_performed;
+
+            //Gas, Oculus LTrigger or keyboward S
+            controller.VR.Right_Gas.performed += Gas_performed;
+            controller.VR.Right_Gas.canceled += Gas_performed;
+        }
 
 
 

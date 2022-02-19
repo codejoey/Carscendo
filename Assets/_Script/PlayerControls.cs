@@ -28,7 +28,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             ""id"": ""fa31024a-c3ea-4f81-a3d8-57239ace8853"",
             ""actions"": [
                 {
-                    ""name"": ""Grip"",
+                    ""name"": ""Left_Grip"",
                     ""type"": ""Button"",
                     ""id"": ""07f99a56-9410-40f1-b0e7-77e675d627ea"",
                     ""expectedControlType"": ""Button"",
@@ -37,9 +37,27 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Gas"",
+                    ""name"": ""Right_Grip"",
+                    ""type"": ""Button"",
+                    ""id"": ""3ef120c9-e628-42cc-83f9-cbb0296cd603"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Left_Gas"",
                     ""type"": ""Button"",
                     ""id"": ""2858d25d-df05-4e5d-8822-2d4430ae2620"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Right_Gas"",
+                    ""type"": ""Button"",
+                    ""id"": ""f71c3309-681d-4939-b3d2-3100b81b9a6c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -72,7 +90,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Grip"",
+                    ""action"": ""Left_Grip"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -83,7 +101,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Grip"",
+                    ""action"": ""Left_Grip"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -94,7 +112,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Gas"",
+                    ""action"": ""Left_Gas"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -105,7 +123,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Gas"",
+                    ""action"": ""Left_Gas"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -152,6 +170,50 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""L_X"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9063c5cf-955a-4894-a4a6-70a01de6e2c3"",
+                    ""path"": ""<OculusTouchController>{RightHand}/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right_Grip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f70bf720-1aeb-433a-9b8b-066f55ad823c"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right_Grip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""64f22217-1197-433c-bd50-21fe3df4f58f"",
+                    ""path"": ""<OculusTouchController>{RightHand}/triggerPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right_Gas"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bf1691ba-0a4f-4829-8bb4-cc80a7eb23f6"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right_Gas"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -160,8 +222,10 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
 }");
         // VR
         m_VR = asset.FindActionMap("VR", throwIfNotFound: true);
-        m_VR_Grip = m_VR.FindAction("Grip", throwIfNotFound: true);
-        m_VR_Gas = m_VR.FindAction("Gas", throwIfNotFound: true);
+        m_VR_Left_Grip = m_VR.FindAction("Left_Grip", throwIfNotFound: true);
+        m_VR_Right_Grip = m_VR.FindAction("Right_Grip", throwIfNotFound: true);
+        m_VR_Left_Gas = m_VR.FindAction("Left_Gas", throwIfNotFound: true);
+        m_VR_Right_Gas = m_VR.FindAction("Right_Gas", throwIfNotFound: true);
         m_VR_Break = m_VR.FindAction("Break", throwIfNotFound: true);
         m_VR_L_X = m_VR.FindAction("L_X", throwIfNotFound: true);
     }
@@ -223,16 +287,20 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     // VR
     private readonly InputActionMap m_VR;
     private IVRActions m_VRActionsCallbackInterface;
-    private readonly InputAction m_VR_Grip;
-    private readonly InputAction m_VR_Gas;
+    private readonly InputAction m_VR_Left_Grip;
+    private readonly InputAction m_VR_Right_Grip;
+    private readonly InputAction m_VR_Left_Gas;
+    private readonly InputAction m_VR_Right_Gas;
     private readonly InputAction m_VR_Break;
     private readonly InputAction m_VR_L_X;
     public struct VRActions
     {
         private @PlayerControls m_Wrapper;
         public VRActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Grip => m_Wrapper.m_VR_Grip;
-        public InputAction @Gas => m_Wrapper.m_VR_Gas;
+        public InputAction @Left_Grip => m_Wrapper.m_VR_Left_Grip;
+        public InputAction @Right_Grip => m_Wrapper.m_VR_Right_Grip;
+        public InputAction @Left_Gas => m_Wrapper.m_VR_Left_Gas;
+        public InputAction @Right_Gas => m_Wrapper.m_VR_Right_Gas;
         public InputAction @Break => m_Wrapper.m_VR_Break;
         public InputAction @L_X => m_Wrapper.m_VR_L_X;
         public InputActionMap Get() { return m_Wrapper.m_VR; }
@@ -244,12 +312,18 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_VRActionsCallbackInterface != null)
             {
-                @Grip.started -= m_Wrapper.m_VRActionsCallbackInterface.OnGrip;
-                @Grip.performed -= m_Wrapper.m_VRActionsCallbackInterface.OnGrip;
-                @Grip.canceled -= m_Wrapper.m_VRActionsCallbackInterface.OnGrip;
-                @Gas.started -= m_Wrapper.m_VRActionsCallbackInterface.OnGas;
-                @Gas.performed -= m_Wrapper.m_VRActionsCallbackInterface.OnGas;
-                @Gas.canceled -= m_Wrapper.m_VRActionsCallbackInterface.OnGas;
+                @Left_Grip.started -= m_Wrapper.m_VRActionsCallbackInterface.OnLeft_Grip;
+                @Left_Grip.performed -= m_Wrapper.m_VRActionsCallbackInterface.OnLeft_Grip;
+                @Left_Grip.canceled -= m_Wrapper.m_VRActionsCallbackInterface.OnLeft_Grip;
+                @Right_Grip.started -= m_Wrapper.m_VRActionsCallbackInterface.OnRight_Grip;
+                @Right_Grip.performed -= m_Wrapper.m_VRActionsCallbackInterface.OnRight_Grip;
+                @Right_Grip.canceled -= m_Wrapper.m_VRActionsCallbackInterface.OnRight_Grip;
+                @Left_Gas.started -= m_Wrapper.m_VRActionsCallbackInterface.OnLeft_Gas;
+                @Left_Gas.performed -= m_Wrapper.m_VRActionsCallbackInterface.OnLeft_Gas;
+                @Left_Gas.canceled -= m_Wrapper.m_VRActionsCallbackInterface.OnLeft_Gas;
+                @Right_Gas.started -= m_Wrapper.m_VRActionsCallbackInterface.OnRight_Gas;
+                @Right_Gas.performed -= m_Wrapper.m_VRActionsCallbackInterface.OnRight_Gas;
+                @Right_Gas.canceled -= m_Wrapper.m_VRActionsCallbackInterface.OnRight_Gas;
                 @Break.started -= m_Wrapper.m_VRActionsCallbackInterface.OnBreak;
                 @Break.performed -= m_Wrapper.m_VRActionsCallbackInterface.OnBreak;
                 @Break.canceled -= m_Wrapper.m_VRActionsCallbackInterface.OnBreak;
@@ -260,12 +334,18 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             m_Wrapper.m_VRActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Grip.started += instance.OnGrip;
-                @Grip.performed += instance.OnGrip;
-                @Grip.canceled += instance.OnGrip;
-                @Gas.started += instance.OnGas;
-                @Gas.performed += instance.OnGas;
-                @Gas.canceled += instance.OnGas;
+                @Left_Grip.started += instance.OnLeft_Grip;
+                @Left_Grip.performed += instance.OnLeft_Grip;
+                @Left_Grip.canceled += instance.OnLeft_Grip;
+                @Right_Grip.started += instance.OnRight_Grip;
+                @Right_Grip.performed += instance.OnRight_Grip;
+                @Right_Grip.canceled += instance.OnRight_Grip;
+                @Left_Gas.started += instance.OnLeft_Gas;
+                @Left_Gas.performed += instance.OnLeft_Gas;
+                @Left_Gas.canceled += instance.OnLeft_Gas;
+                @Right_Gas.started += instance.OnRight_Gas;
+                @Right_Gas.performed += instance.OnRight_Gas;
+                @Right_Gas.canceled += instance.OnRight_Gas;
                 @Break.started += instance.OnBreak;
                 @Break.performed += instance.OnBreak;
                 @Break.canceled += instance.OnBreak;
@@ -278,8 +358,10 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     public VRActions @VR => new VRActions(this);
     public interface IVRActions
     {
-        void OnGrip(InputAction.CallbackContext context);
-        void OnGas(InputAction.CallbackContext context);
+        void OnLeft_Grip(InputAction.CallbackContext context);
+        void OnRight_Grip(InputAction.CallbackContext context);
+        void OnLeft_Gas(InputAction.CallbackContext context);
+        void OnRight_Gas(InputAction.CallbackContext context);
         void OnBreak(InputAction.CallbackContext context);
         void OnL_X(InputAction.CallbackContext context);
     }

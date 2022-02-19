@@ -6,7 +6,7 @@
             "id": "fa31024a-c3ea-4f81-a3d8-57239ace8853",
             "actions": [
                 {
-                    "name": "Grip",
+                    "name": "Left_Grip",
                     "type": "Button",
                     "id": "07f99a56-9410-40f1-b0e7-77e675d627ea",
                     "expectedControlType": "Button",
@@ -15,9 +15,27 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Gas",
+                    "name": "Right_Grip",
+                    "type": "Button",
+                    "id": "3ef120c9-e628-42cc-83f9-cbb0296cd603",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left_Gas",
                     "type": "Button",
                     "id": "2858d25d-df05-4e5d-8822-2d4430ae2620",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right_Gas",
+                    "type": "Button",
+                    "id": "f71c3309-681d-4939-b3d2-3100b81b9a6c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -50,7 +68,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Grip",
+                    "action": "Left_Grip",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -61,7 +79,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Grip",
+                    "action": "Left_Grip",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -72,7 +90,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Gas",
+                    "action": "Left_Gas",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -83,7 +101,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Gas",
+                    "action": "Left_Gas",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -128,6 +146,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "L_X",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9063c5cf-955a-4894-a4a6-70a01de6e2c3",
+                    "path": "<OculusTouchController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right_Grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f70bf720-1aeb-433a-9b8b-066f55ad823c",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right_Grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "64f22217-1197-433c-bd50-21fe3df4f58f",
+                    "path": "<OculusTouchController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right_Gas",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf1691ba-0a4f-4829-8bb4-cc80a7eb23f6",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right_Gas",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
