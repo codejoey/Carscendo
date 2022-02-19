@@ -11,6 +11,7 @@ public class HandAnim : MonoBehaviour
 {
     private PlayerControls controller;
     public Animator m_animator = null;
+    public bool isLeft = true;
 
     public const string ANIM_LAYER_NAME_POINT = "Point Layer";
     public const string ANIM_LAYER_NAME_THUMB = "Thumb Layer";
@@ -47,13 +48,17 @@ public class HandAnim : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Grip, Oculus LGrip Trigger or keyboard W
-        controller.VR.Grip.performed += Grip_performed;
-        controller.VR.Grip.canceled += Grip_performed;
+        if (isLeft)
+        {
+            //Grip, Oculus LGrip Trigger or keyboard W
+            controller.VR.Grip.performed += Grip_performed;
+            controller.VR.Grip.canceled += Grip_performed;
 
-        //Gas, Oculus LTrigger or keyboward S
-        controller.VR.Gas.performed += Gas_performed;
-        controller.VR.Gas.canceled += Gas_performed;
+            //Gas, Oculus LTrigger or keyboward S
+            controller.VR.Gas.performed += Gas_performed;
+            controller.VR.Gas.canceled += Gas_performed;
+        }
+        
 
 
 

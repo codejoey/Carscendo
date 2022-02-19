@@ -1144,8 +1144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e8b4a8c3948c24093fdb79731b9cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
   m_animator: {fileID: 0}
+  isLeft: 0
   anim_frames: 4
 --- !u!1 &196690
 GameObject:
