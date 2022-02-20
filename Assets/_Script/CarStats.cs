@@ -22,6 +22,6 @@ public class CarStats : MonoBehaviour
         speed = velocity.magnitude; // to get magnitude
         //rotationDegree = GetComponent<Rigidbody>().rotation.eulerAngles.
 
-        audioSource.pitch = 1 + speed/40;
+        audioSource.pitch = 1 + speed/140;
     }
 }
