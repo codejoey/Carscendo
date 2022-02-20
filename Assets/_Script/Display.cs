@@ -9,7 +9,7 @@ public class Display : MonoBehaviour
     public string imagePrefix = "Kitchen_";
     public string file = "C:/Work/AugmentedPerceptionLab/frames";
     public string fileExtention = ".png";
-
+    public int currSlide = 0;
     [HideInInspector]
     public int imageAmount;
 
@@ -31,7 +31,7 @@ public class Display : MonoBehaviour
     }
 
     //reads slide from frame
-    void setSlide(int i)
+    public void setSlide(int i)
     {
         //Get texture
         byte[] bytes = File.ReadAllBytes(file + "/" + imagePrefix + padNumbers(i, 4) + fileExtention);
@@ -49,6 +49,7 @@ public class Display : MonoBehaviour
 
         //Set the Texture you assign in the Inspector as the main texture (Or Albedo)
         renderer.material.SetTexture("_MainTex", frame);
+        currSlide = i;
     }
 
 
