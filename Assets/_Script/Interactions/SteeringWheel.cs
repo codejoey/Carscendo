@@ -37,13 +37,13 @@ public class SteeringWheel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ReleaseHandsFromWheel();
+        ReleaseHandsFromWheel();
 
-        //ConvertHandRotationToSteeringWheelRotation();
+        ConvertHandRotationToSteeringWheelRotation();
 
         ////TurnVehicle();
 
-        //currentWheelRotation = -transform.rotation.eulerAngles.z;
+        currentWheelRotation = -transform.rotation.eulerAngles.z;
     }
 
     private void ReleaseHandsFromWheel()
@@ -124,32 +124,36 @@ public class SteeringWheel : MonoBehaviour
         numberOfHandsOnWheel++;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        //if (other.CompareTag("hand"))
-        //{
-            Debug.Log("collider works");
-            //HandAnim hand = other.GetComponent<HandAnim>();
-            //if (hand.isLeft == false)
-            //{
-            //    //place right hand
-            //    if (rightHandOnWheel == false /*&& someway to validated grip is pressed rn*/)
-            //    {
-            //        PlaceHandOnWheel(ref rightHand, ref rightHandOriginalParent, ref rightHandOnWheel);
-            //    }
+        CapsuleCollider overlapped = other.GetComponent<CapsuleCollider>();
+        if (overlapped)
+        {
+            HandAnim hand = other.GetComponentInParent<HandAnim>();
+            if (hand)
+            {
+                if (hand.isLeft == false)
+                {
+                    //Debug.Log("right hand");
+                    //place right hand
+                    if (rightHandOnWheel == false )//*&& someway to validated grip is pressed rn*//*)
+                    {  
+                        PlaceHandOnWheel(ref rightHand, ref rightHandOriginalParent, ref rightHandOnWheel);
+                    }
 
-            //}
+                }
+                else
+                {
+                    //Debug.Log("left hand");
+                    //place left hand
+                    if (leftHandOnWheel == false) //*&& someway to validated grip is pressed rn*//*)
+                    {
+                        PlaceHandOnWheel(ref leftHand, ref leftHandOriginalParent, ref leftHandOnWheel);
+                    }
 
-            //if (hand.isLeft) 
-            //{
-            //    //place right hand
-            //    if (leftHandOnWheel == false /*&& someway to validated grip is pressed rn*/)
-            //    {
-            //        PlaceHandOnWheel(ref leftHand, ref leftHandOriginalParent, ref leftHandOnWheel);
-            //    }
-
-            //}
-       // }
+                }
+            }
+        }
         
     }
 }
