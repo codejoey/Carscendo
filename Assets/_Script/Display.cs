@@ -59,7 +59,7 @@ public class Display : MonoBehaviour
         imageAmount = Directory.GetFiles(file, "*", SearchOption.TopDirectoryOnly).Length;
         //just show a texture
 
-        setSlide(0);
+        setSlide(1);
     }
 
 
