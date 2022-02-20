@@ -30404,6 +30404,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3454876070ee5e24f8674b47818de8bc, type: 3}
+--- !u!1 &710281011744817555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7034930694628574885, guid: 3454876070ee5e24f8674b47818de8bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 710281011744817554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &710281011744817556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710281011744817555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760a1ec437e48cc458be06e267a58735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagePrefix: 
+  file: D:\Work\Projects\Hackathons\Carscendo\Assets\Prefab\Car\textures
+  fileExtention: .png
+  imageAmount: 0
 --- !u!1 &919132148197503269
 GameObject:
   m_ObjectHideFlags: 0
