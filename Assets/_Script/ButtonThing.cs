@@ -6,10 +6,10 @@ public class ButtonThing : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Button")
-        {
+        //if (other.name == "OVRControllerPrefab")
+        //{
             // do something
             Debug.Log("Button Pressed");
-        }
+        //}
     }
 }
