@@ -33,6 +33,7 @@ public class CarManager : MonoBehaviour
             {
                 mesh.GetComponent<MeshRenderer>().material = Secondary_EDM;
             }
+            isConfirmed = false;
 
         }
         else
@@ -45,18 +46,20 @@ public class CarManager : MonoBehaviour
             {
                 mesh.GetComponent<MeshRenderer>().material = Secondary_Jazz;
             }
+            isConfirmed = true;
+
         }
     }
 
     public void next()
     {
-        if (display.currSlide+1 < display.imageAmount)
+        if (display.currSlide+1 < 5)//hardcoded...
         {
             display.setSlide(display.currSlide+1);
         }
         else
         {
-            display.setSlide(0);
+            display.setSlide(2);
         }
     }
 
