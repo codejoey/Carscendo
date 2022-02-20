@@ -11,5 +11,13 @@ public class ButtonThing : MonoBehaviour
             // do something
             Debug.Log("Button Pressed");
         //}
+
+        GetComponent<MeshRenderer>().material.color = Color.blue;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Button Released");
+        GetComponent<MeshRenderer>().material.color = Color.white;
     }
 }
