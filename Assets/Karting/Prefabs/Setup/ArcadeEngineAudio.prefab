@@ -307,7 +307,7 @@ MonoBehaviour:
   IdleSound: {fileID: 5141113698253163166}
   RunningSound: {fileID: 5141113698274104286}
   Drift: {fileID: 8548943313072018857}
-  RunningSoundMaxVolume: 1
+  RunningSoundMaxVolume: 0.1
   RunningSoundMaxPitch: 1
   ReverseSound: {fileID: 7916209065845860529}
   ReverseSoundMaxVolume: 0.5
