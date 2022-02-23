@@ -50,20 +50,21 @@ In the design of Carscendo, we implemented the gameplay mechanics in as inclusiv
  
  *How we improve accessibility and empower creativity & fun:*
 **1. More Accessible and Fun medium of Music Composition: built-into racing game mechanics:**
-- Car selection chooses a background track.
-- Driving at different speeds changes the rhythm and volume of the background track.
-- Collecting power-ups (like mario-kart) on the road, adds melodies and tunes.
-- Looping feature allows remixing and deeper composing.
-- Record feature allows exporting of creation.
-- Multiplayer allows collaboration between experienced/inexperienced friends.
+- **Car selection** chooses a **background track.**
+- Driving at **different speeds** changes the **rhythm and volume** of the background track.
+- Collecting **power-ups** (like mario-kart) on the road, **adds melodies and tunes**.
+- **Looping** feature allows **remixing and deeper composing.**
+- **Record** feature allows **exporting of creation**.
+- **Multiplayer** allows **collaboration** between experienced/inexperienced friends.
+
 Driving is the mechanism, the proof of concept we are demonstrating – that music can be created in more modern ways with current technology than the old strings and drums. In the future, we want to explore other mediums/methods/mechanisms to make more people creators.
  
 **2. Dyslexic, Deaf, Blind, Paraplegia – Music Accessibility:**
  
-- Deaf: we represent music through stunning audio visualisations
-- Dyslexic: we represent music notes through patterns and shapes (easier to read)
-- Blind: we use haptic feedback and vibrations to aid sensory
-- Physically paralysed: we use oculus quest 2 eye tracking to allow interactions of driving
+- **Deaf**: we represent music through stunning audio visualisations
+- **Dyslexic**: we represent music notes through patterns and shapes (easier to read)
+- **Blind**: we use haptic feedback and vibrations to aid sensory
+- **Physically paralysed**: we use oculus quest 2 eye tracking to allow interactions of driving
  
 ## How we built it
  
