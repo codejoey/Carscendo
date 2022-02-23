@@ -49,6 +49,7 @@ In the design of Carscendo, we implemented the gameplay mechanics in as inclusiv
 ## What it does
  
  *How we improve accessibility and empower creativity & fun:*
+
 **1. More Accessible and Fun medium of Music Composition: built-into racing game mechanics:**
 - **Car selection** chooses a **background track.**
 - Driving at **different speeds** changes the **rhythm and volume** of the background track.
@@ -81,10 +82,11 @@ Challenges:
 - VR Interaction physics are really difficult to write from the ground up.
 - Off the shelf assets vary in quality. They can be either or low or high poly and the buyer has no way of knowing before hand. Placing market assets into the scene tanked our performance and we had to find other ways to make our scene pretty.
 - The design of audio visualisation is just as important as the functionality.
+- The performance behind features can break whether it's even able to be included in final solution. We made 3 audio visualisations (for background track, for power-ups, for in-car), while running on a computer was fine – it was too heavy to include more than one for the headset.
  
 ## Accomplishments that we're proud of
  
-**For the scope of this hackathon our goal was to establish the ground work for how an unconventional medium could manipulate music while simultaneously standing alone as a racing simulator that users would enjoy playing**
+**For the scope of this hackathon our goal was to establish the ground work for how an unconventional medium could manipulate music while simultaneously standing alone as a racing simulator that users would enjoy playing.**
 We knew that creating a game of any kind in 36 hours- let alone one that had extremely innovative functionalities was an extremely ambitious task. The combination of virtual reality, real-time audio visualisation, and reactive audio based on user interactions, was a monumental goal.
  
 ## What we learned
